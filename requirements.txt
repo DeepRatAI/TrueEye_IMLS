@@ -1,0 +1,19 @@
+# Núcleo del flujo construido en LangFlow
+langflow>=1.4.2          # carga el .json y ejecuta el grafo
+langchain>=0.1.17        # aseguramos versión compatible con langflow
+
+# Modelo remoto Anthropic
+anthropic>=0.16.0        # Claude 3 (Haiku/Sonnet/Opus)
+
+# Interfaz
+gradio>=4.14.0,<5        # requiere componentes Gauge & HighlightedText
+
+# Utilidades auxiliares
+tiktoken>=0.5.2          # token counting (usado internamente por langchain)
+requests>=2.31.0         # descargas ocasionales si amplías el flujo
+python-dotenv>=1.0.1     # cargar ANTHROPIC_API_KEY desde .env local (opcional)
+
+# Fixes de compatibilidad (HF base image a veces los omite)
+pydantic>=1.10.13,<2     # langchain 0.1.x requiere Pydantic v1
+typing-extensions>=4.10  # para modelos recientes de Python 3.10
+
