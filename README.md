@@ -3,7 +3,7 @@
 *Powered 100 % by **Claude 3 Opus** (Anthropic API) 🔥*
 
 <div align="center">
-  <img src=".assets/trueeye_logo.png" width="120" alt="TrueEye logo"/>
+  <img src=".assets/trueeye_logo.png" width="100%" alt="TrueEye logo"/>
 </div>
 
 TrueEye turns any news article or post into a **professional report** covering 🔍
