@@ -12,8 +12,10 @@ gradio>=4.14.0,<5        # requiere componentes Gauge & HighlightedText
 tiktoken>=0.5.2          # token counting (usado internamente por langchain)
 requests>=2.31.0         # descargas ocasionales si amplías el flujo
 python-dotenv>=1.0.1     # cargar ANTHROPIC_API_KEY desde .env local (opcional)
+beautifulsoup4>=4.12.2   # HTML parsing for the RecursiveUrlLoader
+httpx>=0.24.1            # async HTTP client used by custom loader
+loguru>=0.7.2            # advanced logging during execution
 
 # Fixes de compatibilidad (HF base image a veces los omite)
-pydantic>=1.10.13,<2     # langchain 0.1.x requiere Pydantic v1
 typing-extensions>=4.10  # para modelos recientes de Python 3.10
 
