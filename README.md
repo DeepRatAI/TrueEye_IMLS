@@ -25,12 +25,11 @@ After a year of daily experimentation with the major LLMs, **Claude’s Constitu
 ```bash
 git clone https://github.com/<user>/trueeye.git
 cd trueeye
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY="sk-..."   # your real key
-python app.py                       # http://127.0.0.1:7860
+docker build -t trueeye .
+docker run -it -e ANTHROPIC_API_KEY="sk-..." -p 7860:7860 trueeye
 ```
 
-> Runs on plain CPU; heavy lifting happens on Anthropic’s servers.
+> The LangFlow UI will be available at http://127.0.0.1:7860
 
 ---
 
@@ -66,10 +65,9 @@ python app.py                       # http://127.0.0.1:7860
 ```
 trueeye/
 ├─ trueeye_flow.json   → LangFlow graph
-├─ app.py              → Gradio UI
-├─ requirements.txt
-├─ .assets/            → logos, demo GIF
-└─ docs/               → specs, notes, roadmap
+├─ requirements.txt    → Python dependencies
+├─ Dockerfile          → container recipe for HF Spaces
+├─ .assets/            → logos
 ```
 
 ---
